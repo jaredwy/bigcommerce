@@ -99,13 +99,14 @@ module("fisher yates shuffle tests");
   });
 
    test("Ensure deck orders correctly on values and suit", function() {
-     var deck = [{value: 13, suit: 1 }, {value: 13, suit: 2 },{value: 1, suit: 2 }, {value: 1, suit:1}, {value: 13, suit:4} ];
+     var deck = [{value: 13, suit: 1 }, {value: 13, suit: 2 },{value: 12, suit: 2 },{value: 1, suit: 2 }, {value: 1, suit:1}, {value: 13, suit:4} ];
      var sorted = deck.sort(DeckSort);
      ok( sorted[0].value == 13 && sorted[0].suit == 1 , "King of hearts comes first" ); 
      ok( sorted[1].value == 1 && sorted[1].suit == 1, "one of hearts comes second"); 
      ok( sorted[2].value == 13 && sorted[2].suit == 2, "King of diamonds comes third" ); 
-     ok( sorted[3].value == 1 && sorted[3].suit == 2, "one of diamonds comes fourth"); 
-     ok( sorted[4].value == 13 && sorted[4].suit == 4, "King of clubs comes last"); 
+    ok( sorted[3].value == 12 && sorted[3].suit == 2, "Queen of diamonds comes fourth" ); 
+     ok( sorted[4].value == 1 && sorted[4].suit == 2, "one of diamonds comes fifth"); 
+     ok( sorted[5].value == 13 && sorted[5].suit == 4, "King of clubs comes last"); 
   });
 
 
