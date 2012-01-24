@@ -1,16 +1,15 @@
 See card.js for assumptions i made.
 
-I did not implment a full deck object, instead outlined my architecture in the assumptions of a workable deck. Was not sure if a full deck was needed to be implmented.
+I did not implement a full deck object, instead outlined my architecture in the assumptions of a workable deck. Was not sure if a full deck was needed to be implemented.
 
 The tests will show how they are intended to be used.
 
-The included tests are simply testing the units at work as they should. So these functions should be fairly adaptable to any card object, hence reducing coupiling.
+The included tests are simply testing the units at work as they should. So these functions should be fairly adaptable to any card object, hence reducing coupling.
 
 To run the tests open index.html the libraries are included as external resources, so the machine will need internet access.
 
 
-I had originally started down with the first test, and was going to use backbone, but it would have required me to spin up a server to get around the way you guys do authentication with basic auth, which does not play nice with jsonp (at least as far as i could gather from your docs and a cursory glance over the php implmentation of a client). To request an external resource with out cors, it requires jsonp which allows no control over the header. Just something for you to keep in mind developing rest apis.
+I had originally started down with the first test, and was going to use backbone, but it would have required me to spin up a server to get around the way you guys do authentication with basic auth, which does not play nice with jsonp (at least as far as i could gather from your docs and a cursory glance over the php implementation of a client). To request an external resource with out cors, it requires jsonp which allows no control over the header. Just something for you to keep in mind developing rest apis.
 
 
-I supplied a overwritable random function as i had intended to test the shuffle, however i hit a limitation of the mocking framework used. Started to write the extension but, sleepy so bed won out.
-
+I supplied a overwritable random function as i had intended to test the shuffle, however i hit a limitation of the mocking framework used. Started to write the extension but, sleepy so bed won out. Random is always hard to test, i usually rip the entire implementation out and use an integration test with deterministic values. But since this test *is* the implementation this will have to do.
