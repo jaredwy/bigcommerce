@@ -9,7 +9,7 @@ The included tests are simply testing the units at work as they should. So these
 To run the tests open index.html the libraries are included as external resources, so the machine will need internet access.
 
 
-I had originally started down with the first test, and was going to use backbone, but it would have required me to spin up a server to get around the way you guys do authentication with basic auth, which does not play nice with jsonp (at least as far as i could gather from your docs and a cursory glance over the php implementation of a client). To request an external resource with out cors, it requires jsonp which allows no control over the header. Just something for you to keep in mind developing rest apis.
+I had originally started down with the first test, and was going to use backbone, but it would have required me to spin up a server to get around the way you guys do authentication with basic auth, which does not play nice with jsonp (at least as far as i could gather from your docs and a cursory glance over the php implementation of a client). To request an external resource with out cors, it requires jsonp which allows no control over the header(which is possible using iframes but not the standard jquery ajax requests). Just something for you to keep in mind developing rest apis.
 
 
 I supplied a overwritable random function as i had intended to test the shuffle, however i hit a limitation of the mocking framework used. Started to write the extension but, sleepy so bed won out. Random is always hard to test, i usually rip the entire implementation out and use an integration test with deterministic values. But since this test *is* the implementation this will have to do.
