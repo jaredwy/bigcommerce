@@ -15,7 +15,7 @@
 
 	Then simply use this in an index as a member of the Function Deck  (note: not the prototype) for display.
 	This is probably more efficient for storage as the engine can store the entire array as Smi(both v8 and tracemonkey do this) rather than a mixed type array.
-
+	The sort would then just rank on order to 
 	Namespace.Deck.Suits = ["club","Spades"];
 
 	Namespace.Deck = function(cards,shuffle) {
@@ -35,8 +35,6 @@
 
 
 */
-
-
 
 //implmentation of the Fisher-Yates shuffle
 function FisherYatesShuffle(cards,random) {
