@@ -1,0 +1,13 @@
+See card.js for assumptions i made.
+
+I did not implment a full deck object, instead outlined my architecture in the assumptions.
+Test coverage tests the units at work as the should, so these functions should be fairly adaptable to any card object.
+
+To run the tests open index.html the libraries are included as external resources, so the machine will need internet access.
+
+Apart from that i think the tests show the usage pretty well. 
+
+I had originally started down with the first test, and was going to use backbone, but it would have required me to spin up a server to get around the way you guys do authentication with basic auth, which does not play nice with jsonp (at least as far as i could gather from your docs and a cursory glance over the php implmentation of a client). To request an external resource with out cors, it requires jsonp which allows no control over the header. Just something for you to keep in mind developing rest apis.
+
+
+
